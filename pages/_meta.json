@@ -1,5 +1,5 @@
 {
-  "index": "Introduction",
+  "intro": "Introduction",
   "another": "Another Page",
   "advanced": "Advanced (A Folder)",
   "about": {
@@ -7,9 +7,9 @@
     "type": "page"
   },
   "contact": {
-    "title": "Contact ↗",
+    "title": "Contact",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://twitter.com/lnuicomponent",
     "newWindow": true
   }
 }
