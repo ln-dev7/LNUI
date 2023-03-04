@@ -41,6 +41,7 @@
         line-height: 1;
         font-weight: 700;
         color: $ln-primary;
+        font-family: $font-secondary;
 
         @media only screen and (max-width: 1024px) {
           font-size: 3rem;
@@ -160,7 +161,7 @@
         }
       }
     }
-    &__animation {
+    &__images {
       position: absolute;
       left: 0;
       width: 350px;
@@ -195,17 +196,6 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        //margin-bottom: 1rem;
-        //gap: 1rem;
-        animation: scroll 15s linear infinite backwards;
-        @keyframes scroll {
-          0% {
-            transform: translateY(0);
-          }
-          100% {
-            transform: translateY(-100%);
-          }
-        }
         img {
           padding-top: 0.5rem;
           width: 100%;
@@ -225,14 +215,8 @@
     &__container {
       display: flex;
       align-items: center;
-      overflow: hidden;
-      &:hover {
-        & >* {
-          animation-play-state: paused;
-        }
-      }
     }
-    &-title  {
+    &-title {
       font-size: 1.25rem;
       letter-spacing: 0.1rem;
       font-weight: 500;
@@ -242,27 +226,21 @@
       text-align: center;
     }
     &-logos {
+      width: 100%;
       display: flex;
       align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
       flex-shrink: 0;
-      animation: scrollSponsors 20s linear infinite;
       a {
         flex-shrink: 0;
         display: block;
-        margin-right: 2rem;
         width: 150px;
-      }
-      @keyframes scrollSponsors {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-100%);
-        }
       }
     }
     &-add {
-      font-size: .875rem;
+      font-size: 0.875rem;
       font-weight: 500;
       color: $color-lnui-3;
       margin-top: 2rem;
