@@ -1,0 +1,14 @@
+/* Make clicks pass-through */
+#nprogress {
+  --primary-color: #00abe7; //changing mine to red
+  pointer-events: none;
+}
+#nprogress .bar {
+  background: linear-gradient(90deg, #00fcab 0%, #00abe7 50%, #1cdaff 100%);
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.5px;
+}

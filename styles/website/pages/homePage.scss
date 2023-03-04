@@ -1,0 +1,274 @@
+.homePage {
+  //min-height: 100vh;
+  .hero {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    //align-items: center;
+    background: url("../../../public/images/hero-bg.jpg");
+    background-size: 150rem;
+    background-repeat: no-repeat;
+    //background-position: bottom;
+    background-color: rgb(248 250 252/1);
+    overflow: hidden;
+    &__lines {
+      position: absolute;
+      inset: 0;
+      mask-image: linear-gradient(to bottom, transparent, black);
+      -webkit-mask-image: linear-gradient(to bottom, transparent, black);
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='30' height='30' fill='none' stroke='rgb(15 23 42 / 0.04)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+      background-position: bottom 1px center;
+      background-color: rgb(255 255 255/0.25);
+    }
+    &__container {
+      z-index: 2;
+      padding: 12rem 1rem 10rem 1rem;
+      width: 100%;
+      max-width: 58rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      @media only screen and (max-width: 640px) {
+        padding: 9rem 1rem 6rem 1rem;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 3.75rem;
+        line-height: 1;
+        font-weight: 700;
+        color: $ln-primary;
+
+        @media only screen and (max-width: 1024px) {
+          font-size: 3rem;
+          line-height: 1;
+        }
+
+        @media only screen and (max-width: 640px) {
+          font-size: 2.25rem;
+          line-height: 2.5rem;
+        }
+
+        span {
+          font-size: inherit;
+          font-weight: inherit;
+          font-family: inherit;
+        }
+        span:first-child {
+          background: linear-gradient(
+            90deg,
+            $color-lnui-1 0%,
+            $color-lnui-2 50%,
+            $color-lnui-3 100%
+          );
+          //background: linear-gradient(90deg, $color-lnui-1, $color-lnui-2 0%, $color-lnui-3 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        span:last-child {
+          background: linear-gradient(
+            90deg,
+            $color-lnui-1 0%,
+            $color-lnui-2 50%,
+            $color-lnui-3 100%
+          );
+          //background: linear-gradient(90deg, $color-lnui-1, $color-lnui-2 0%, $color-lnui-3 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      p {
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.5;
+        color: $ln-primary;
+        text-align: center;
+        span {
+          font-size: inherit;
+          font-weight: inherit;
+          color: $color-lnui-3;
+        }
+      }
+
+      &-button {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        @media screen and (max-width: 520px) {
+          width: 100%;
+          flex-direction: column;
+          a {
+            width: 100%;
+          }
+        }
+        a {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+          border-radius: 10px;
+          transition: all 0.3s ease;
+
+          span {
+            font-size: 1.075rem;
+            padding: 0.675rem 1.5rem;
+            font-weight: 600;
+          }
+        }
+
+        &__first {
+          background: $ln-primary;
+          color: $ln-light;
+          $border: 2px;
+          border: solid $border transparent;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+
+        &__second {
+          background: linear-gradient(white, white) padding-box,
+            //linear-gradient(to right, $color-lnui-3, $color-lnui-2) border-box;
+            linear-gradient(
+                to right,
+                $color-lnui-2 0%,
+                $color-lnui-1 50%,
+                $color-lnui-3 100%
+              );
+          border: 2px solid transparent;
+
+          span {
+            color: $ln-primary;
+          }
+
+          &:hover {
+            background: linear-gradient(white, white) padding-box,
+              // linear-gradient(to right, $color-lnui-2, $color-lnui-3) border-box;
+              linear-gradient(
+                  to right,
+                  $color-lnui-1 0%,
+                  $color-lnui-2 50%,
+                  $color-lnui-3 100%
+                );
+          }
+        }
+      }
+    }
+    &__animation {
+      position: absolute;
+      left: 0;
+      width: 350px;
+      height: 100%;
+      overflow: hidden;
+
+      mask-image: linear-gradient(90deg, black 0%, transparent 80%);
+      -webkit-mask-image: linear-gradient(90deg, black 0%, transparent 80%);
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        height: 100px;
+        width: 350px;
+        z-index: 2;
+        background: linear-gradient(
+          180deg,
+          rgb(255, 255, 255) 80%,
+          transparent 85%
+        );
+      }
+
+      @media only screen and (max-width: 80rem) {
+        display: none;
+        &::before {
+          display: none;
+        }
+      }
+
+      &-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        //margin-bottom: 1rem;
+        //gap: 1rem;
+        animation: scroll 15s linear infinite backwards;
+        @keyframes scroll {
+          0% {
+            transform: translateY(0);
+          }
+          100% {
+            transform: translateY(-100%);
+          }
+        }
+        img {
+          padding-top: 0.5rem;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .sponsors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding: 2rem 0;
+    background: $ln-light;
+    border-bottom: 1px solid rgb(15 23 42 / 0.075);
+    &__container {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      &:hover {
+        & >* {
+          animation-play-state: paused;
+        }
+      }
+    }
+    &-title  {
+      font-size: 1.25rem;
+      letter-spacing: 0.1rem;
+      font-weight: 500;
+      color: $ln-primary;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    &-logos {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      animation: scrollSponsors 20s linear infinite;
+      a {
+        flex-shrink: 0;
+        display: block;
+        margin-right: 2rem;
+        width: 150px;
+      }
+      @keyframes scrollSponsors {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    }
+    &-add {
+      font-size: .875rem;
+      font-weight: 500;
+      color: $color-lnui-3;
+      margin-top: 2rem;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
