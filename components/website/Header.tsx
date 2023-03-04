@@ -34,7 +34,7 @@ export default function Header() {
           <div className="line"></div>
           <a
             className="header-right__github"
-            href="https://github.com/lnuicomponent"
+            href="https://github.com/ln-dev7/lnui"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +109,7 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <a href="https://github.com/lnuicomponent">
+                  <a href="https://github.com/ln-dev7/lnui">
                     <span>Github</span>
                   </a>
                 </li>
