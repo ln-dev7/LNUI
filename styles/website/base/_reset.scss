@@ -84,13 +84,16 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
   h1 {
     display: block;
     padding-top: 4px;
     font-size: 1.75rem;
     line-height: 1.5; 
     font-weight: 600;
+    user-select: none;
   }
   img {
+    user-select: none;
   }
 }
