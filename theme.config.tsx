@@ -1,10 +1,22 @@
 import React from "react";
 import { DocsThemeConfig } from "nextra-theme-docs";
+import Image from "next/image.js";
 
 const config: DocsThemeConfig = {
-  logo: <b>LNUI</b>,
+  logo: (
+    <div className="lnui-logo">
+    <Image
+      loader={({ src }) => src}
+      src="logos/logo.svg"
+      alt="logo"
+      width={30}
+      height={30}
+    />
+    <h1>lnui</h1>
+  </div>
+  ),
   project: {
-    link: "https://github.com/shuding/nextra-docs-template",
+    link: "https://github.com/ln-dev7/LNUI",
   },
   chat: {
     icon: (
@@ -21,11 +33,23 @@ const config: DocsThemeConfig = {
         />
       </svg>
     ),
-    link: "https://discord.com",
+    link: "https://twitter.com/lnuicomponent",
   },
-  docsRepositoryBase: "https://github.com/shuding/nextra-docs-template",
+  docsRepositoryBase: "https://github.com/ln-dev7/LNUI",
   footer: {
-    text: "Nextra Docs Template",
+    text: (
+      <span>
+        LNUI | Build by{" "}
+        <a
+          href="https://lndev.me"
+          style={{
+            fontWeight: 600,
+          }}
+        >
+          Leonel Ngoya 🇨🇲
+        </a>{" "}
+      </span>
+    ),
   },
 };
 

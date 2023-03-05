@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-lnInfos">
         <p className="footer-lnInfos__made">
-          Proudly made in 🇨🇲 by Leonel Ngoya
+          Proudly made in 🇨🇲 by Leonel Ngoya | 2022 - {new Date().getFullYear()}
         </p>
         <div className="footer-lnInfos__socials">
           <a href="https://lndev.me">

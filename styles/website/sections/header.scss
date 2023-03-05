@@ -11,7 +11,7 @@
   align-items: center;
 
   &__container {
-    padding: 0.5rem 1rem;
+    padding: 1.5rem 1rem;
     width: 100%;
     max-width: 80rem;
     display: flex;
@@ -34,10 +34,17 @@
     align-items: center;
     gap: 2rem;
 
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     &__item {
       display: flex;
       align-items: center;
       gap: 5px;
+      padding-top: 4px;
 
       span {
         display: block;

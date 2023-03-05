@@ -15,21 +15,23 @@ export default function Header() {
     <header className="header">
       <div className="header__container">
         <div className="header-left">
-          <Image
-            className="header-left__logo"
-            loader={({ src }) => src}
-            src="logos/9.svg"
-            alt="logo"
-            width={140}
-            height={70}
-          />
+          <div className="lnui-logo">
+            <Image
+              loader={({ src }) => src}
+              src="logos/logo.svg"
+              alt="logo"
+              width={30}
+              height={30}
+            />
+            <h1>lnui</h1>
+          </div>
         </div>
         <div className="header-right">
-          <Link className="header-right__item locked-link" href="#">
-            <span>Components</span>
+          <Link className="header-right__item" href="/intro">
+            <span>Docs</span>
           </Link>
-          <Link className="header-right__item" href="/examples">
-            <span className="item__link">Examples</span>
+          <Link className="header-right__item" href="/templates">
+            <span className="item__link">Templates</span>
           </Link>
           <div className="line"></div>
           <a
@@ -98,14 +100,14 @@ export default function Header() {
                 </svg>
               </button>
               <ul>
-                <li className="locked-link">
-                  <Link href="#">
-                    <span>Components</span>
+                <li>
+                  <Link href="/intro">
+                    <span>Docs</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/examples">
-                    <span>Examples</span>
+                  <Link href="/templates">
+                    <span>Templates</span>
                   </Link>
                 </li>
                 <li>
