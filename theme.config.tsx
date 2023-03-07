@@ -5,15 +5,15 @@ import Image from "next/image.js";
 const config: DocsThemeConfig = {
   logo: (
     <div className="lnui-logo">
-    <Image
-      loader={({ src }) => src}
-      src="logos/logo.svg"
-      alt="logo"
-      width={30}
-      height={30}
-    />
-    <h1>lnui</h1>
-  </div>
+      <Image
+        loader={({ src }) => src}
+        src="logos/logo.svg"
+        alt="logo"
+        width={30}
+        height={30}
+      />
+      <h1>lnui</h1>
+    </div>
   ),
   project: {
     link: "https://github.com/ln-dev7/LNUI",
@@ -47,6 +47,17 @@ const config: DocsThemeConfig = {
           }}
         >
           Leonel Ngoya 🇨🇲
+        </a>{" "}
+        |{" "}
+        <a
+          href="https://www.buymeacoffee.com/lndev"
+          style={{
+            fontWeight: 500,
+            textDecoration: "underline",
+            display: "inline-block",
+          }}
+        >
+          Make a donation
         </a>{" "}
       </span>
     ),

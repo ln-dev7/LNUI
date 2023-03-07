@@ -1,0 +1,304 @@
+import { Tab, Tabs } from "nextra-theme-docs";
+import Header from "../../../components/lnui/components/headers/header";
+
+<Tabs items={["html", "scss", "js", "preview"]}>
+  <Tab>
+  ```html filename="index.html" copy {0}
+
+      <header class="header">
+      <div class="header__container">
+        <div class="header-logo">
+          <img src="assets/9.svg" alt="logo" />
+        </div>
+        <div class="header-nav">
+          <ul class="header-nav__links">
+            <a href="#">Events</a>
+            <a href="#">Forum</a>
+            <a href="#">Articles</a>
+            <a href="#">Podcasts</a>
+            <a href="#">Jobs</a>
+            <img src="assets/29.svg" alt="icon" />
+          </ul>
+          <div class="header-nav__auth">
+            <button>Login</button>
+            <button>Sign up</button>
+          </div>
+        </div>
+        <img class="menu-open" src="assets/12.svg" alt="icon" />
+        <div class="header-overlay">
+          <div class="header-menu">
+            <div class="header-menu__top">
+              <img src="assets/29.svg" alt="icon" />
+              <img class="menu-close" src="assets/13.svg" alt="icon" />
+            </div>
+            <div class="header-menu__items">
+              <ul>
+                <a href="#">Events</a>
+                <a href="#">Forum</a>
+                <a href="#">Articles</a>
+                <a href="#">Podcasts</a>
+                <a href="#">Jobs</a>
+              </ul>
+              <div>
+                <button>Login</button>
+                <button>Sign up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+````
+</Tab>
+<Tab>
+```scss filename="style.scss" {0} copy
+.header {
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+top: 0;
+width: 100%;
+border-bottom: 1px solid #f4f4f5;
+background: #ffffff;
+z-index: 3;
+animation: introHeader 1s ease forwards;
+@keyframes introHeader {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 840px) {
+  animation: none;
+}
+&__container {
+  width: 95%;
+  max-width: 1280px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+&-logo {
+}
+&-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  @media screen and (max-width: 840px) {
+    display: none;
+  }
+  &__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    a {
+      font-weight: 400;
+      font-size: 1.125rem;
+      transition: 0.3s color ease;
+      &:hover {
+        color: $green;
+      }
+    }
+    img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+      background: #f0fdf4;
+      border: 1px solid #dcfce7;
+      border-radius: 50%;
+    }
+  }
+
+  &__auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    button {
+      padding: 0.5rem 1.125rem;
+      border: 2px solid $green;
+      background: $green;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      transition: 0.3s ease;
+      &:first-child {
+        color: #ffffff;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      &:last-child {
+        background: #fff;
+        color: $green;
+        border-color: #fff;
+        &:hover {
+          border-color: $green;
+          background: rgba($color: $green, $alpha: 0.05);
+        }
+      }
+    }
+  }
+
+}
+.menu-open {
+display: none;
+@media screen and (max-width: 840px) {
+display: block;
+}
+}
+&-overlay {
+display: none;
+justify-content: flex-end;
+position: fixed;
+inset: 0;
+width: 100%;
+height: 100%;
+background: rgba($color: #27272a, $alpha: 0.2);
+  transition: 0.3s ease;
+  .header-menu {
+    width: 300px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: 0.3s ease;
+    &__top {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 1.4rem 1rem;
+      border-bottom: 1px solid #f4f4f5;
+      img:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        background: #f0fdf4;
+        border: 1px solid #dcfce7;
+        border-radius: 50%;
+      }
+    }
+    &__items {
+      width: 100%;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 1.25rem 1rem;
+      gap: 1.5rem;
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+        a {
+          display: inline-block;
+          text-align: center;
+          width: 100%;
+          font-weight: 400;
+          font-size: 1.125rem;
+          transition: 0.3s color ease;
+          &:hover {
+            color: $green;
+          }
+        }
+      }
+      div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+        button {
+          width: 100%;
+          padding: 0.5rem 1.125rem;
+          border: 2px solid $green;
+          background: $green;
+          font-weight: 500;
+          cursor: pointer;
+          border-radius: 0.5rem;
+          transition: 0.3s ease;
+          &:first-child {
+            color: #ffffff;
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+          &:last-child {
+            background: #fff;
+            color: $green;
+            border-color: $green;
+            &:hover {
+              background: rgba($color: $green, $alpha: 0.05);
+}
+}
+}
+}
+}
+&.show {
+transform: translateX(0);
+}
+}
+@media screen and (max-width: 840px) {
+&.show {
+display: flex;
+}
+}
+}
+}
+
+````
+
+  </Tab>
+  <Tab>
+
+    ```js filename="app.js" copy {0}
+
+const headerMenu = document.querySelector(".header-menu");
+const menuOpen = document.querySelector(".menu-open");
+const menuClose = document.querySelector(".menu-close");
+const headerOverlay = document.querySelector(".header-overlay");
+
+menuOpen.addEventListener("click", function () {
+setTimeout(function () {
+headerMenu.classList.add("show");
+}, 100);
+headerOverlay.classList.add("show");
+});
+menuClose.addEventListener("click", function () {
+headerMenu.classList.remove("show");
+setTimeout(function () {
+headerOverlay.classList.remove("show");
+}, 300);
+});
+
+```
+
+  </Tab>
+  <Tab style={{
+    position: "relative",
+  }}>
+  <Header/>
+  </Tab>
+</Tabs>
+
+

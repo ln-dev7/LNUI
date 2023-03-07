@@ -27,8 +27,8 @@ export default function Header() {
           </div>
         </div>
         <div className="header-right">
-          <Link className="header-right__item" href="/intro">
-            <span>Docs</span>
+          <Link className="header-right__item" href="/components">
+            <span>Components</span>
           </Link>
           <Link className="header-right__item" href="/templates">
             <span className="item__link">Templates</span>
@@ -101,8 +101,8 @@ export default function Header() {
               </button>
               <ul>
                 <li>
-                  <Link href="/intro">
-                    <span>Docs</span>
+                  <Link href="/components">
+                    <span>Components</span>
                   </Link>
                 </li>
                 <li>
