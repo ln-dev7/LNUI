@@ -1,4 +1,5 @@
 import "../styles/website/index.scss";
+import "../styles/lnui/index.scss";
 import type { AppProps } from "next/app";
 
 import Script from "next/script";

@@ -38,12 +38,12 @@ export default function Home() {
               >
                 <span>Discover</span>
               </Link>
-              <a
-                href="https://www.buymeacoffee.com/lndev"
+              <Link
+                href="/templates"
                 className="hero__container-button__second"
               >
-                <span>Make a donation</span>
-              </a>
+                <span>Explore templates</span>
+              </Link>
             </div>
           </div>
         </section>
