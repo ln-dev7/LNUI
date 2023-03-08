@@ -1,0 +1,62 @@
+.card {
+  position: relative;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  gap: 1rem;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.card::before {
+  position: absolute;
+  content: "";
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transform: translate(-10px, -10px);
+  transition: 0.3s ease-in-out;
+}
+.card:hover::before {
+  transform: translate(0);
+}
+.card h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  gap: 0.5rem;
+}
+.card h3 span {
+  background: #f2f2f2;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #007bff;
+}
+.card p {
+  color: #515255;
+  font-size: 14px;
+  font-weight: 400;
+}
+.card button {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #007bff;
+  background: #fff;
+  color: #007bff;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+.card button:hover {
+  background: #007bff;
+  color: #fff;
+}

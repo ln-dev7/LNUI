@@ -1,5 +1,4 @@
 import "../styles/website/index.scss";
-import "../styles/lnui/index.scss";
 import type { AppProps } from "next/app";
 
 import Script from "next/script";
@@ -29,8 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
         openGraph={{
           url: "https://lnui.lndev.me/",
           title: "LNUI",
-          description:
-            "Create beautiful websites with multiple components",
+          description: "Create beautiful websites with multiple components",
           images: [
             {
               url: "https://lnui.lndev.me/logos/10.png",
