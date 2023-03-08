@@ -17,8 +17,9 @@ export default function () {
         <div className="header__container">
           <div className="header-logo">
             <img
-              src="https://flutter-cameroon.leonelngoya.com/assets/9.svg"
+              src="https://lnui.lndev.me/logos/9.svg"
               alt="logo"
+              width={100}
             />
           </div>
           <div className="header-nav">
