@@ -2,14 +2,11 @@
   "intro": "Introduction",
   "components": "Components",
   "templates": "Templates",
-  "about": {
-    "title": "About",
-    "type": "page"
-  },
+  "about": "About",
   "contact": {
     "title": "Contact",
     "type": "page",
-    "href": "https://twitter.com/lnuicomponent",
+    "href": "https://twitter.com/ln_dev7",
     "newWindow": true
   }
 }
