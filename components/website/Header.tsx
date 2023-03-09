@@ -72,7 +72,7 @@ export default function Header() {
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
-            stroke="currentColor"
+            stroke="#0f172a"
             className="w-6 h-6"
           >
             <path

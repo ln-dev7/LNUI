@@ -35,7 +35,6 @@ const config: DocsThemeConfig = {
     ),
     link: "https://twitter.com/lnuicomponent",
   },
-  docsRepositoryBase: "https://github.com/ln-dev7/LNUI",
   footer: {
     text: (
       <span>

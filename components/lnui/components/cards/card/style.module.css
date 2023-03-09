@@ -31,6 +31,7 @@
   align-items: center;
   font-weight: 600;
   gap: 0.5rem;
+  color: #334154;
 }
 .card h3 span {
   background: #f2f2f2;
