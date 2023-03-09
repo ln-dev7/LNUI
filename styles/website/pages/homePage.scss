@@ -167,6 +167,7 @@
     overflow: hidden;
     padding: 2rem 0;
     background: $ln-light;
+    border-bottom: 1px solid rgb(15 23 42 / 0.075);
     &__container {
       display: flex;
       align-items: center;
@@ -203,8 +204,5 @@
         text-decoration: underline;
       }
     }
-  }
-  .newsletter {
-    background: #F7FAFC;
   }
 }

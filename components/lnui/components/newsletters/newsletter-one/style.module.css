@@ -1,0 +1,94 @@
+.join {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #007a5e;
+  padding: 1.5rem 0;
+}
+.join__container {
+  width: 95%;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+@media screen and (max-width: 478px) {
+  .join__container {
+    align-items: flex-start;
+  }
+}
+.join h2 {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 3.5rem;
+  color: #fff;
+  z-index: 2;
+}
+@media screen and (max-width: 478px) {
+  .join h2 {
+    line-height: 20px;
+    font-size: 2rem;
+  }
+}
+.join p {
+  text-align: center;
+  z-index: 2;
+  color: #fff;
+}
+@media screen and (max-width: 478px) {
+  .join p {
+    text-align: left;
+  }
+}
+.join_subscribe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 2;
+}
+@media screen and (max-width: 478px) {
+  .join_subscribe {
+    flex-direction: column;
+    width: 100%;
+  }
+  .join_subscribe button,
+  .join_subscribe input {
+    width: 100%;
+  }
+}
+.join_subscribe button {
+  padding: 0.5rem 1.125rem;
+  border: 2px solid #4ade80;
+  background: #4ade80;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: 0.3s ease;
+  color: #007a5e;
+}
+.join_subscribe button:hover {
+  opacity: 0.8;
+}
+.join_subscribe input {
+  overflow: hidden;
+  outline: none;
+  padding: 0.5rem 1.125rem;
+  border: 2px solid #fff;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: 0.3s ease;
+  color: #a1a1aa;
+  flex-grow: 1;
+}
+.join_subscribe input:focus {
+  border-color: #a1a1aa;
+}
+.join_subscribe input::placeholder {
+  color: #a1a1aa;
+}

@@ -67,18 +67,20 @@ export default function Home() {
             Your logo here?
           </a>
         </div>
-        <div className="newsletter">
-          <div className="newsletter__container">
-            <h2>Subscribe to our newsletter</h2>
-            <p>
-              Receive the latest news and updates from LNUI and our community
-            </p>
-            <div>
-              <input type="email" />
-              <button type="submit">Subscribe</button>
+        {false && (
+          <div className="newsletter">
+            <div className="newsletter__container">
+              <h2>Subscribe to our newsletter</h2>
+              <p>
+                Receive the latest news and updates from LNUI and our community
+              </p>
+              <div>
+                <input type="email" />
+                <button type="submit">Subscribe</button>
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </main>
 
       <Footer />
