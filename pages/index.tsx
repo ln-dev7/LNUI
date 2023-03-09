@@ -32,10 +32,7 @@ export default function Home() {
               will allow you to build your website from scratch
             </p>
             <div className="hero__container-button">
-              <Link
-                href="/intro"
-                className="hero__container-button__first"
-              >
+              <Link href="/intro" className="hero__container-button__first">
                 <span>Discover</span>
               </Link>
               <Link
@@ -70,6 +67,20 @@ export default function Home() {
             Your logo here?
           </a>
         </div>
+        {false && (
+          <div className="newsletter">
+            <div className="newsletter__container">
+              <h2>Subscribe to our newsletter</h2>
+              <p>
+                Receive the latest news and updates from LNUI and our community
+              </p>
+              <div>
+                <input type="email" />
+                <button type="submit">Subscribe</button>
+              </div>
+            </div>
+          </div>
+        )}
       </main>
 
       <Footer />

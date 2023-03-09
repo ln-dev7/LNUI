@@ -1,17 +1,107 @@
+import { Tab, Tabs } from "nextra-theme-docs";
+import Index from "../../components/lnui/components/cards/card-one/index.tsx";
+
 ## Cards
 
-import { Card, Cards } from "nextra-theme-docs";
+### Cad One
 
-<Cards>
-  <Card
-    icon={
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776" />
-    </svg>
+<Tabs items={["preview", "html", "css"]}>
+  <Tab
+    style={{
+      backgroundColor: "#007bff",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "500px",
+      marginTop: "1.5rem",
+    }}
+  >
+    <Index />
+  </Tab>
+  <Tab>
+    ```html filename="index.html" {0} copy
+    <div class="card">
+      <h3>
+        👩🏾‍💻CaParleDev
+        <span>Tech</span>
+      </h3>
+      <p>
+        CaParleDev est une communauté de développeurs et designers passionnés
+        par l’open source.
+      </p>
+      <button>S'abonner</button>
+    </div>
+    ```
+  </Tab>
+  <Tab
+    style={{
+      height: "500px",
+      overflow: "auto",
+    }}
+  >
+    ```css filename="style.css" {0} copy
+    .card {
+        position: relative;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: #fff;
+        border-radius: 12px;
+        padding: 12px;
+        gap: 1rem;
+        flex-shrink: 0;
+        z-index: 1;
     }
-    title="Card"
-    href="/components/cards/card"
-
-> </Card>
-
-</Cards>
+    .card::before {
+        position: absolute;
+        content: "";
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        transform: translate(-10px, -10px);
+        transition: 0.3s ease-in-out;
+    }
+    .card:hover::before {
+        
+    }
+    .card h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        gap: 0.5rem;
+    }
+    .card h3 span {
+        background: #f2f2f2;
+        border-radius: 10px;
+        padding: 5px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #007bff;
+    }
+    .card p {
+        color: #515255;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .card button {
+        width: 100%;
+        padding: 8px;
+        border: 2px solid #007bff;
+        background: #fff;
+        color: #007bff;
+        font-weight: 500;
+        cursor: pointer;
+        border-radius: 12px;
+        transition: 0.3s ease;
+    }
+    .card button:hover {
+        background: #007bff;
+        color: #fff;
+    }
+    ```
+  </Tab>
+</Tabs>
