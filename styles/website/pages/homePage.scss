@@ -176,10 +176,20 @@
       font-size: 1.25rem;
       letter-spacing: 0.1rem;
       font-weight: 500;
-      color: $ln-primary;
+      //color: $ln-primary;
       margin-bottom: 2rem;
       text-transform: uppercase;
       text-align: center;
+
+      background: linear-gradient(
+        90deg,
+        $color-lnui-3 0%,
+        $color-lnui-2 50%,
+        $color-lnui-1 100%
+      );
+      //background: linear-gradient(90deg, $color-lnui-1, $color-lnui-2 0%, $color-lnui-3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
     &-logos {
       width: 100%;
@@ -193,6 +203,11 @@
         flex-shrink: 0;
         display: block;
         width: 150px;
+        filter: grayscale(100%);
+        transition: 0.3s;
+        &:hover {
+          filter: grayscale(0);
+        }
       }
     }
     &-add {
