@@ -221,3 +221,32 @@
     }
   }
 }
+
+.lnui-alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: linear-gradient(90deg, $color-lnui-1 0%, $color-lnui-2 50%);
+  p {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: $ln-primary;
+    text-align: center;
+  }
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    outline: none;
+    align-self: flex-end;
+    cursor: pointer;
+    svg {
+      width: 30px;
+    }
+  }
+}
