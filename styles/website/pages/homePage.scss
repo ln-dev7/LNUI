@@ -236,17 +236,4 @@
     color: $ln-primary;
     text-align: center;
   }
-  button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: none;
-    border: none;
-    outline: none;
-    align-self: flex-end;
-    cursor: pointer;
-    svg {
-      width: 30px;
-    }
-  }
 }
