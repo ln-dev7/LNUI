@@ -30,8 +30,8 @@ export default function Header() {
           <Link className="header-right__item" href="/components">
             <span>Components</span>
           </Link>
-          <Link className="header-right__item" href="/templates">
-            <span className="item__link">Templates</span>
+          <Link className="header-right__item" href="https://www.figma.com/file/uu8FrA2UOGgEuyhOucJpTz/Components?type=design&node-id=0%3A1&mode=design&t=MNgnyHfn0JezFBnr-1">
+            <span className="item__link">Figma</span>
           </Link>
           <div className="line"></div>
           <a

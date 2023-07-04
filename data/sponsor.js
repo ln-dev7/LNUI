@@ -14,9 +14,4 @@ export const sponsors = [
     logo: "/sponsors/osscameroon.png",
     url: "https://osscameroon.com/",
   },
-  {
-    name: "Ulwo App",
-    logo: "/sponsors/ulwo.svg",
-    url: "https://ulwo.lndev.me/",
-  },
 ];

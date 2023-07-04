@@ -43,14 +43,14 @@ export default function Home() {
                 that will allow you to build your website from scratch
               </p>
               <div className="hero__container-button">
-                <Link href="/intro" className="hero__container-button__first">
+                <Link href="/intro" className="hero__container-button__second">
                   <span>Discover</span>
                 </Link>
                 <Link
-                  href="/templates"
-                  className="hero__container-button__second"
+                  href="https://github.com/ln-dev7/LNUI/"
+                  className="hero__container-button__first"
                 >
-                  <span>Explore templates</span>
+                  <span>GitHub</span>
                 </Link>
               </div>
             </div>

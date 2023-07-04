@@ -1,12 +1,10 @@
 {
   "intro": "Introduction",
   "components": "Components",
-  "templates": "Templates",
   "about": "About",
-  "contact": {
-    "title": "Contact",
-    "type": "page",
-    "href": "https://twitter.com/ln_dev7",
+  "Figma": {
+    "title": "Figma",
+    "href": "https://www.figma.com/file/uu8FrA2UOGgEuyhOucJpTz/Components?type=design&node-id=283%3A159&mode=design&t=MNgnyHfn0JezFBnr-1",
     "newWindow": true
   }
 }
