@@ -1,17 +1,14 @@
+import { useEffect } from "react";
 import "../styles/website/index.scss";
 import type { AppProps } from "next/app";
-
 import Script from "next/script";
-
 import GoogleAnalytics from "@bradgarropy/next-google-analytics";
 import { NextSeo } from "next-seo";
-
 import "./../styles/website/utils/nprogress.scss";
-
 import Router from "next/router";
-import NProgress from "nprogress"; //nprogress module
-import "nprogress/nprogress.css"; //styles of nprogress
-//Route Events.
+import NProgress from "nprogress";
+import "nprogress/nprogress.css";
+
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
@@ -19,6 +16,10 @@ Router.events.on("routeChangeError", () => NProgress.done());
 NProgress.configure({ showSpinner: false });
 
 export default function App({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    window.location.replace("https://ui.lndev.me");
+  }, []);
+
   return (
     <>
       <NextSeo
